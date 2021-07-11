@@ -59,7 +59,7 @@
                     <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ url('home') }}"><img class="brand-logo" alt="modern admin logo" src=" {{ asset('images/logo.png' )}}">
                             <h3 class="brand-text">{{ env('APP_NAME') }}</h3>
                         </a></li>
-                    <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
+                    <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"></a></li>
                     <li class="nav-item d-lg-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a></li>
                 </ul>
             </div>
@@ -189,11 +189,11 @@
     <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="active"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="Crypto Dashboard">Crypto Dashboard</span></a>
+                <li class="active"><a href="{{ url('home')}}"><i class="la la-home"></i><span class="menu-title" data-i18n="Crypto Dashboard">Dashboard</span></a>
                 </li>
                 <li class=" navigation-header"><span data-i18n="Crypto">Crypto</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Crypto"></i>
                 </li>
-                <li class=" nav-item"><a href="crypto-transactions.html"><i class="la la-list"></i><span class="menu-title" data-i18n="Transactions">Transactions</span></a>
+                <li class=" nav-item"><a href="{{ url('uploadfile')}}"><i class="la la-list"></i><span class="menu-title" data-i18n="">Upload File</span></a>
                 </li>
                 <li class=" nav-item"><a href="crypto-currency-exchange.html"><i class="la la-money"></i><span class="menu-title" data-i18n="Currency Exchange">Currency Exchange</span></a>
                 </li>
@@ -373,7 +373,9 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{asset('js/dashboard-crypto.js')}}"></script>
+    <!-- <script src="{{asset('js/dashboard-crypto.js')}}"></script> -->
+
+    <script src="{{ asset('js/custom.js') }}" defer></script>
     <!-- END: Page JS-->
 
 </body>

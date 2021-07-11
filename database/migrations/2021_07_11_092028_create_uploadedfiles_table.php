@@ -15,6 +15,9 @@ class CreateUploadedfilesTable extends Migration
     {
         Schema::create('uploadedfiles', function (Blueprint $table) {
             $table->id();
+            $table->string('remarks');
+            $table->date('date_taken');
+            $table->integer('atteded_by');
             $table->timestamps();
         });
     }
