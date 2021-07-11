@@ -9,7 +9,7 @@
     <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
     <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
-    <title>Crypto Dashboard - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin Dashboard</title>
+    <title> @yield('title')</title>
 
     <link rel="apple-touch-icon" href="{{asset('images/apple-icon-120.png')}}" />
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}" />
@@ -41,6 +41,8 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}" />
+
+    
     <!-- END: Custom CSS-->
 
 </head>
@@ -189,11 +191,11 @@
     <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class="active"><a href="{{ url('home')}}"><i class="la la-home"></i><span class="menu-title" data-i18n="Crypto Dashboard">Dashboard</span></a>
+                <li id="web_li_dashboard" class="nav_item web_li_dashboard"><a href="{{ url('home')}}"><i class="la la-home"></i><span class="menu-title" data-i18n="Crypto Dashboard">Dashboard</span></a>
                 </li>
                 <li class=" navigation-header"><span data-i18n="Crypto">Crypto</span><i class="la la-ellipsis-h" data-toggle="tooltip" data-placement="right" data-original-title="Crypto"></i>
                 </li>
-                <li class=" nav-item"><a href="{{ url('uploadfile')}}"><i class="la la-list"></i><span class="menu-title" data-i18n="">Upload File</span></a>
+                <li id="web_li_uploadfile" class="nav_item web_li_uploadfile"><a href="{{ url('uploadfile')}}"><i class="la la-list"></i><span class="menu-title" data-i18n="">Upload File</span></a>
                 </li>
                 <li class=" nav-item"><a href="crypto-currency-exchange.html"><i class="la la-money"></i><span class="menu-title" data-i18n="Currency Exchange">Currency Exchange</span></a>
                 </li>
@@ -355,27 +357,30 @@
     </footer>
     <!-- END: Footer-->
 
+    @section('scripts')
 
-    <!-- BEGIN: Vendor JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{asset('js/app.js')}}"></script>
-    <!-- <script src="{{asset('js/vendors.min.js')}}"></script> -->
     
-    <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
     <script src="{{asset('js/chart.min.js')}}"></script>
     <script src="{{asset('js/apexcharts.min.js')}}"></script>
+    <script src="{{asset('js/global_func.js')}}"></script>
+    @show
+
+ 
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="{{asset('js/app-menu.js')}}"></script>
+    <!-- <script src="{{asset('js/app-menu.js')}}"></script> -->
     <!-- <script src="{{asset('js/app.js')}}"></script> -->
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
     <!-- <script src="{{asset('js/dashboard-crypto.js')}}"></script> -->
 
-    <script src="{{ asset('js/custom.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/custom.js') }}" defer></script> -->
+
+    
     <!-- END: Page JS-->
 
 </body>

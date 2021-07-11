@@ -63,7 +63,7 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-        <a href="{{ url('/home') }}">Login</a>
+        <a href="{{ url('/login') }}">Login</a>
     </div>
   </nav>
 </header>
